@@ -110,7 +110,7 @@
         path: '/opt/appdata/{{pgrole}}/sabnzbd.ini'
         section: misc
         option: download_dir
-        value: '{{path.stdout}}/incomplete/{{pgrole}}'
+        value: '/media/media/downloads/incomplete'
         state: present
 
     - name: Set complete_dir
@@ -118,7 +118,7 @@
         path: '/opt/appdata/{{pgrole}}/sabnzbd.ini'
         section: misc
         option: complete_dir
-        value: '{{path.stdout}}/downloads/{{pgrole}}'
+        value: '/media/media/downloads/complete'
         state: present
 
     - name: Set nzb watch location
